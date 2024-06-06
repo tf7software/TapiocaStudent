@@ -4,8 +4,7 @@
   "description": "A simple Node.js app that uses Gemini AI to answer questions like a student",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    
+    "start": "node app.js"
   },
   "dependencies": {
     "@google/generative-ai": "^1.0.0",
