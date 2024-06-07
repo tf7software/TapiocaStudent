@@ -3,10 +3,13 @@ document.getElementById('ask-btn').addEventListener('click', async () => {
     const responseDiv = document.getElementById('response');
     responseDiv.innerHTML = 'Thinking...';
 
+    // Determine the response type based on the toggle switch
+    const responseType = document.getElementById('toggle-response-type').checked ? 'student' : 'question';
+
     const response = await fetch('/ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question })
+        body: JSON.stringify({ question, responseType })
     });
     
     const data = await response.json();
