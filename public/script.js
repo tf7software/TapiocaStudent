@@ -3,6 +3,9 @@ document.getElementById('ask-btn').addEventListener('click', async () => {
     const responseDiv = document.getElementById('response');
     responseDiv.innerHTML = 'Thinking...';
 
+    // Hide the copy button when a new question is asked
+    document.getElementById('copy-btn').style.display = 'none';
+
     // Determine the response type based on the toggle switch
     const responseType = document.getElementById('toggle-response-type').checked ? 'student' : 'question';
 
