@@ -22,3 +22,6 @@ document.getElementById('copy-btn').addEventListener('click', () => {
         .then(() => alert('Response copied to clipboard!'))
         .catch(err => console.error('Could not copy text: ', err));
 });
+
+// Hide the copy button initially
+document.getElementById('copy-btn').style.display = 'none';
